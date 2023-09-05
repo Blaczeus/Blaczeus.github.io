@@ -82,6 +82,13 @@ i {
 body {
     background: var(--body-color);
 }
+img {
+    width: 50px;
+    height: 40px;
+    /* transform: rotate(178.48deg); */
+    flex-shrink: 0;
+    filter: drop-shadow(2.673764228820801px 3.342205286026001px 6.684410572052002px rgba(0, 0, 0, 0.26));
+}
 
 .container {
     width: 100%;
