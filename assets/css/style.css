@@ -82,12 +82,12 @@ i {
 body {
     background: var(--body-color);
 }
-img {
+/* img {
     width: 40px;
     height: 30px;
     flex-shrink: 0;
     filter: drop-shadow(2.673764228820801px 3.342205286026001px 6.684410572052002px rgba(0, 0, 0, 0.26));
-}
+} */
 
 .container {
     width: 100%;
@@ -280,6 +280,7 @@ nav {
     width: 380px;
     height: 380px;
     object-fit: cover;
+    filter: none;
 }
 
 @keyframes imgFloat {
