@@ -206,6 +206,7 @@ nav {
 }
 
 .featured-name {
+    width: 150%;
     font-size: 50px;
     font-weight: 600;
     color: var(--text-color-second);
@@ -604,6 +605,13 @@ footer {
 }
 
 
+/* ----- MEDIA QUERY == 1210px / RESPONSIVE ----- */
+@media only screen and (max-width: 1210px) {
+   .featured-name {
+        width: 120%;
+    }
+}
+
 /* ----- MEDIA QUERY == 1024px / RESPONSIVE ----- */
 @media only screen and (max-width: 1024px) {
     .featured-text {
@@ -614,6 +622,13 @@ footer {
     .image img {
         width: 320px;
         height: 320px;
+    }
+}
+
+/* ----- MEDIA QUERY == 935px / RESPONSIVE ----- */
+@media only screen and (max-width: 935px) {
+nav {
+        width: 105%;
     }
 }
 
@@ -680,8 +695,8 @@ footer {
 
     .image,
     .image img {
-        width: 150px;
-        height: 150px;
+        width: 220px;
+        height: 220px;
     }
 
     .row {

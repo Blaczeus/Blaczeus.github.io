@@ -94,11 +94,13 @@ function scrollActive() {
     const sectionHeight = current.offsetHeight,
       sectionTop = current.offsetTop - 50,
       sectionId = current.getAttribute("id");
+    console.log(sectionId);
 
     if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
       document
         .querySelector(".nav-menu a[href*=" + sectionId + "]")
         .classList.add("active-link");
+      console.log("Works");
     } else {
       document
         .querySelector(".nav-menu a[href*=" + sectionId + "]")
@@ -107,4 +109,4 @@ function scrollActive() {
   });
 }
 
-window.addEventListener("scroll", scrollActive);
+window.addEventListener("scroll", scrollActive());
