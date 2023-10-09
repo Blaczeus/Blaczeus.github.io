@@ -109,4 +109,26 @@ function scrollActive() {
   });
 }
 
-window.addEventListener("scroll", scrollActive());
+window.addEventListener("scroll", scrollActive);
+
+/* ----- DOWNLOAD CV BUTTON ----- */
+
+const downloadButtons = document.querySelectorAll(".download-cv-btn");
+const cvFilePath = "assets/cv/Anya_Chidiebere_CV.pdf"; // Replace with the actual path
+
+downloadButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const anchor = document.createElement("a");
+    anchor.style.display = "none";
+
+    anchor.href = cvFilePath;
+
+    anchor.download = "Anya_Chidiebere_CV.pdf";
+
+    document.body.appendChild(anchor);
+
+    anchor.click();
+
+    document.body.removeChild(anchor);
+  });
+});
