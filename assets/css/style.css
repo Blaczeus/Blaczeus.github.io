@@ -16,6 +16,24 @@
     --third-color: rgb(192, 166, 49);
     --first-shadow-color: rgba(0, 0, 0, 0.1);
 
+    --instagram-color: #bc2a8d;
+    --instagram-color-rgb: 188, 42, 141; 
+
+    --linkedin-color: #0077b5;
+    --linkedin-color-rgb: 0, 119, 181; 
+
+    --dribbble-color: #ea4c89;
+    --dribbble-color-rgb: 234, 76, 137; 
+
+    --github-color: #333;
+    --github-color-rgb: 51, 51, 51;
+
+    --whatsapp-color: #25d366;
+    --whatsapp-color-rgb: 37, 211, 102;
+
+    --twitter-color: #1DA1F2;
+    --twitter-color-rgb: 29, 161, 242;
+
 }
 
 /* ----- BASE ----- */
@@ -235,7 +253,8 @@ nav {
 }
 
 .featured-text-btn>.blue-btn:hover {
-    background: var(--first-color-hover);
+    background: rgb(239 239 239);
+    color: var(--color-black);
 }
 
 .social_icons {
@@ -248,17 +267,110 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
     width: 40px;
     height: 40px;
     border-radius: 50%;
     box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
     cursor: pointer;
 }
 
-.icon:hover {
-    color: var(--first-color);
+.icon:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    border-radius: 50%;
+    transition: background 0.3s ease, transform 0.3s ease;
 }
 
+.icon:hover:before {
+    transform: scale(1.2);
+}
+
+.icon i {
+    font-size: 16px;
+    z-index: 1;
+    color: white;
+    transition: color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.icon.instagram:before {
+    background: var(--instagram-color);
+    }
+
+.icon.instagram:hover:before {
+    transform: scale(1.2);
+}
+
+.icon.instagram:hover i {
+    color: var(--instagram-color);
+}
+
+.icon.linkedin-alt:before {
+    background: var(--linkedin-color);
+    }
+
+.icon.linkedin-alt:hover:before {
+    transform: scale(1.2);
+}
+
+.icon.linkedin-alt:hover i {
+    color: var(--linkedin-color);
+}
+
+.icon.dribbble:before {
+    background: var(--dribbble-color);
+    }
+
+.icon.dribbble:hover:before {
+    transform: scale(1.2);
+}
+
+.icon.dribbble:hover i {
+    color: var(--dribbble-color);
+}
+
+.icon.github-alt:before {
+    background: var(--github-color);
+    }
+
+.icon.github-alt:hover:before {
+    transform: scale(1.2);
+}
+
+.icon.github-alt:hover i {
+    color: var(--github-color);
+} 
+.icon.whatsapp:before {
+    background: var(--whatsapp-color);
+    }
+
+.icon.whatsapp:hover:before {
+    transform: scale(1.2); 
+}
+
+.icon.whatsapp:hover i {
+    color: var(--whatsapp-color);
+}
+
+.icon.twitter:before {
+    background: var(--twitter-color);
+    }
+
+.icon.twitter:hover:before {
+    transform: scale(1.2);
+ 
+}
+
+.icon.twitter:hover i {
+    color: var(--twitter-color);
+}
 /* ----- FEATURED IMAGE BOX ----- */
 .featured-image {
     display: flex;
@@ -596,7 +708,9 @@ footer {
 
 .footer-social-icons {
     display: flex;
-    gap: 30px;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
 }
 
 .bottom-footer {
