@@ -114,7 +114,7 @@ window.addEventListener("scroll", scrollActive);
 /* ----- DOWNLOAD CV BUTTON ----- */
 
 const downloadButtons = document.querySelectorAll(".download-cv-btn");
-const cvFilePath = "assets/cv/Anya_Chidiebere_CV.pdf"; // Replace with the actual path
+const cvFilePath = "assets/cv/Anya_Chidiebere_CV.pdf";
 
 downloadButtons.forEach((button) => {
   button.addEventListener("click", () => {
